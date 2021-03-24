@@ -1,0 +1,13 @@
+C:\Users\rena3\OneDrive\سطح المكتب\code\c#\Students-grades-entry-system\Students-grades-entry-system\bin\Debug\netcoreapp3.1\Students-grades-entry-system.exe
+C:\Users\rena3\OneDrive\سطح المكتب\code\c#\Students-grades-entry-system\Students-grades-entry-system\bin\Debug\netcoreapp3.1\Students-grades-entry-system.deps.json
+C:\Users\rena3\OneDrive\سطح المكتب\code\c#\Students-grades-entry-system\Students-grades-entry-system\bin\Debug\netcoreapp3.1\Students-grades-entry-system.runtimeconfig.json
+C:\Users\rena3\OneDrive\سطح المكتب\code\c#\Students-grades-entry-system\Students-grades-entry-system\bin\Debug\netcoreapp3.1\Students-grades-entry-system.runtimeconfig.dev.json
+C:\Users\rena3\OneDrive\سطح المكتب\code\c#\Students-grades-entry-system\Students-grades-entry-system\bin\Debug\netcoreapp3.1\Students-grades-entry-system.dll
+C:\Users\rena3\OneDrive\سطح المكتب\code\c#\Students-grades-entry-system\Students-grades-entry-system\bin\Debug\netcoreapp3.1\Students-grades-entry-system.pdb
+C:\Users\rena3\OneDrive\سطح المكتب\code\c#\Students-grades-entry-system\Students-grades-entry-system\obj\Debug\netcoreapp3.1\Students-grades-entry-system.csprojAssemblyReference.cache
+C:\Users\rena3\OneDrive\سطح المكتب\code\c#\Students-grades-entry-system\Students-grades-entry-system\obj\Debug\netcoreapp3.1\Students-grades-entry-system.AssemblyInfoInputs.cache
+C:\Users\rena3\OneDrive\سطح المكتب\code\c#\Students-grades-entry-system\Students-grades-entry-system\obj\Debug\netcoreapp3.1\Students-grades-entry-system.AssemblyInfo.cs
+C:\Users\rena3\OneDrive\سطح المكتب\code\c#\Students-grades-entry-system\Students-grades-entry-system\obj\Debug\netcoreapp3.1\Students-grades-entry-system.csproj.CoreCompileInputs.cache
+C:\Users\rena3\OneDrive\سطح المكتب\code\c#\Students-grades-entry-system\Students-grades-entry-system\obj\Debug\netcoreapp3.1\Students-grades-entry-system.dll
+C:\Users\rena3\OneDrive\سطح المكتب\code\c#\Students-grades-entry-system\Students-grades-entry-system\obj\Debug\netcoreapp3.1\Students-grades-entry-system.pdb
+C:\Users\rena3\OneDrive\سطح المكتب\code\c#\Students-grades-entry-system\Students-grades-entry-system\obj\Debug\netcoreapp3.1\Students-grades-entry-system.genruntimeconfig.cache
