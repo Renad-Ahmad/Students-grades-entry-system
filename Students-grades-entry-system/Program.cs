@@ -6,9 +6,14 @@ namespace Students_grades_entry_system
     {
         static void results(String name, int grade)
         {
-            Console.WriteLine(name + " and his grade is " + grade);
-
-
+            if(grade >= 60)
+            {
+                Console.WriteLine(name + " and his grade is " + grade + " Passed");
+            }
+            else 
+            {
+                Console.WriteLine(name + " and his grade is " + grade + " Failed");
+            }
         }
 
         static void Main(string[] args)
