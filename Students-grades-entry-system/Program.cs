@@ -20,10 +20,10 @@ namespace Students_grades_entry_system
 
             while (true)
             {
-                Console.WriteLine("chose your operation \n" +
+                Console.WriteLine("Chose your operation \n" +
                     "1. Add student\n"+
                     "2. View students\n"+
-                    "3.change student info"
+                    "3.Change student info"
                     );
                 string operation = Console.ReadLine();
                 if (operation == "1")
@@ -55,10 +55,24 @@ namespace Students_grades_entry_system
             Console.WriteLine("Enterstudent name: ");
             student.name = Console.ReadLine();
 
-            Console.WriteLine("Enter Grade: ");
-            student.setGrade(int.Parse(Console.ReadLine()));
+            if(student.name != "") 
+            {
+                Console.WriteLine("Enter Grade: ");
+                try
+                {
+                    student.setGrade(int.Parse(Console.ReadLine()));
+                    ls.Add(student);
+                }
+                catch (Exception)
+                {
 
-            ls.Add(student);
+                    Console.WriteLine("The grade can not be empty and it should be in numbers.");
+                }
+            }
+            else
+            {
+                Console.WriteLine("The student name can not be empty.");
+            }
 
         }
 
@@ -68,12 +82,8 @@ namespace Students_grades_entry_system
 
             for (int i = 0; i < ls.Count; i++)
             {
-                //Console.WriteLine(i);
                 Console.WriteLine(i + 1 + ". " + ls[i].toString());
             }
-
-            
-
         }
 
         public static void changeStudentsInfo()
@@ -82,43 +92,68 @@ namespace Students_grades_entry_system
             viewStudents();
 
             // prompt the user which student he wants to change (user input = 1 then index = 0)
-            Console.WriteLine("enter a number");
-            int search = int.Parse(Console.ReadLine());
-            search -= 1;
-            //print the student
-            for (int i = 0; i < ls.Count; i++)
-            {   if (search == i)
-                { 
-                    Console.WriteLine(ls[i].toString());
+            Console.WriteLine("Enter student number");
+            try
+            {
+                int search = int.Parse(Console.ReadLine());
+                search -= 1;
 
-                    Console.WriteLine("Enter (1) to update both name and grade \n" +
-                        " Enter (2) to update only the name \n" +
-                        " Enter (3) to update only the name ");
-                    int operation = int.Parse(Console.ReadLine());
-
-                    switch (operation)
+                //print the student
+                for (int i = 0; i < ls.Count; i++)
+                {
+                    if (search == i)
                     {
-                        case 1:
-                            Console.WriteLine("update student name: ");
-                            ls[i].setName(Console.ReadLine());
+                        Console.WriteLine(ls[i].toString());
 
-                            Console.WriteLine("update Grade: ");
-                            ls[i].setGrade(int.Parse(Console.ReadLine()));
-                            break;
-                        case 2:
-                            Console.WriteLine("update student name: ");
-                            ls[i].setName(Console.ReadLine());
-                            break;
-                        case 3:
-                            Console.WriteLine("update Grade: ");
-                            ls[i].setGrade(int.Parse(Console.ReadLine()));
-                            break;
-                        default:
-                            Console.WriteLine("Invalid input");
-                            break;
+                        Console.WriteLine("\n Enter (1) to update both name and grade \n" +
+                            " Enter (2) to update only the name \n" +
+                            " Enter (3) to update only the grade ");
+                        int operation = int.Parse(Console.ReadLine());
+
+                        switch (operation)
+                        {
+                            case 1:
+                                Console.WriteLine("Update student name: ");
+                                ls[i].setName(Console.ReadLine());
+
+                                Console.WriteLine("Update Grade: ");
+                                try
+                                {
+                                    ls[i].setGrade(int.Parse(Console.ReadLine()));
+                                }
+                                catch (Exception)
+                                {
+
+                                    Console.WriteLine("The grade can not be empty and it should be in numbers.");
+                                }
+                                break;
+                            case 2:
+                                Console.WriteLine("Update student name: ");
+                                ls[i].setName(Console.ReadLine());
+                                break;
+                            case 3:
+                                Console.WriteLine("Update student Grade: ");
+                                try
+                                {
+                                    ls[i].setGrade(int.Parse(Console.ReadLine()));
+                                }
+                                catch (Exception)
+                                {
+
+                                    Console.WriteLine("The grade can not be empty and it should be in numbers.");
+                                }
+                                break;
+                            default:
+                                Console.WriteLine("Invalid input");
+                                break;
+                        }
+
                     }
-
                 }
+            }
+            catch(Exception)
+            {
+                Console.WriteLine("This can not be empty and you should enter numbers only.");
             }
 
         }
@@ -151,7 +186,7 @@ namespace Students_grades_entry_system
 
         public string toString()
         {
-            return this.name + "\t" + this.grade + "\t" + this.status;
+            return this.name + "\t \t " + this.grade + "\t " + this.status;
         }
 
     }
