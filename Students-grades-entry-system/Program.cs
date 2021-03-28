@@ -79,14 +79,47 @@ namespace Students_grades_entry_system
         public static void changeStudentsInfo()
         {
             // print students
+            viewStudents();
 
             // prompt the user which student he wants to change (user input = 1 then index = 0)
+            Console.WriteLine("enter a number");
+            int search = int.Parse(Console.ReadLine());
+            search -= 1;
+            //print the student
+            for (int i = 0; i < ls.Count; i++)
+            {   if (search == i)
+                { 
+                    Console.WriteLine(ls[i].toString());
 
-            // prompt the user to change the name (-1 don't change)
-            // if -1 keep the old name 
+                    Console.WriteLine("Enter (1) to update both name and grade \n" +
+                        " Enter (2) to update only the name \n" +
+                        " Enter (3) to update only the name ");
+                    int operation = int.Parse(Console.ReadLine());
 
-            // prompt the user to change the grade (-1 don't change)
-            // if -1 keep the old grade 
+                    switch (operation)
+                    {
+                        case 1:
+                            Console.WriteLine("update student name: ");
+                            ls[i].setName(Console.ReadLine());
+
+                            Console.WriteLine("update Grade: ");
+                            ls[i].setGrade(int.Parse(Console.ReadLine()));
+                            break;
+                        case 2:
+                            Console.WriteLine("update student name: ");
+                            ls[i].setName(Console.ReadLine());
+                            break;
+                        case 3:
+                            Console.WriteLine("update Grade: ");
+                            ls[i].setGrade(int.Parse(Console.ReadLine()));
+                            break;
+                        default:
+                            Console.WriteLine("Invalid input");
+                            break;
+                    }
+
+                }
+            }
 
         }
     }
@@ -97,11 +130,16 @@ namespace Students_grades_entry_system
         private int grade;
         private string status;
 
+        public void setName(string newname)
+        {
+            this.name = newname;
+        }
+
         public void setGrade(int newGrade)
         {
             this.grade = newGrade;
 
-            if (grade >= 60)
+            if (grade >=  60)
             {
                 this.status = "Pass";
             }
